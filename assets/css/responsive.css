@@ -67,12 +67,10 @@
     }
 
     .hero-content {
-        max-width: 720px;
-
-        margin-inline: auto;
-
-        text-align: center;
+    grid-template-columns: 1fr;
+    gap: 32px;
     }
+
 
     .hero-description {
         margin-inline: auto;
@@ -83,7 +81,7 @@
     }
 
     .hero-visual {
-        min-height: 340px;
+        min-height: 280px;
     }
 
     .hero-placeholder {
