@@ -1,0 +1,51 @@
+/* =========================================
+   ErgoStarter — Responsive Styles
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+    }
+
+    .section {
+        padding-block: var(--space-16);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    html {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.35rem;
+    }
+
+    .container,
+    .content-container {
+        width: min(100% - 1.5rem, var(--container-width));
+    }
+
+    .section {
+        padding-block: var(--space-12);
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
