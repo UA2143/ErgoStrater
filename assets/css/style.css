@@ -1,0 +1,307 @@
+/* =========================================
+   ErgoStarter — Global Design System
+   ========================================= */
+
+:root {
+    /* Brand Colors */
+    --color-primary: #2f6f5e;
+    --color-primary-dark: #245747;
+    --color-primary-light: #e8f3ef;
+
+    /* Neutral Colors */
+    --color-white: #ffffff;
+    --color-black: #111111;
+    --color-heading: #17201d;
+    --color-text: #4b5752;
+    --color-muted: #78827e;
+
+    /* Backgrounds */
+    --color-background: #f8faf9;
+    --color-surface: #ffffff;
+    --color-surface-alt: #f0f4f2;
+
+    /* Borders */
+    --color-border: #e1e7e4;
+
+    /* Typography */
+    --font-primary:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    /* Font Sizes */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 2rem;
+    --text-4xl: 2.75rem;
+    --text-5xl: 4rem;
+
+    /* Spacing */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+
+    /* Layout */
+    --container-width: 1200px;
+    --content-width: 800px;
+
+    /* UI */
+    --radius-sm: 8px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+
+    --shadow-sm: 0 2px 8px rgba(17, 17, 17, 0.05);
+    --shadow-md: 0 8px 24px rgba(17, 17, 17, 0.08);
+
+    /* Animation */
+    --transition-fast: 150ms ease;
+    --transition-normal: 250ms ease;
+}
+
+
+/* =========================================
+   Reset
+   ========================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+
+body {
+    font-family: var(--font-primary);
+    background: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/* =========================================
+   Typography
+   ========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-heading);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+
+h1 {
+    font-size: var(--text-5xl);
+    letter-spacing: -0.04em;
+}
+
+
+h2 {
+    font-size: var(--text-4xl);
+    letter-spacing: -0.03em;
+}
+
+
+h3 {
+    font-size: var(--text-2xl);
+}
+
+
+p {
+    margin-bottom: var(--space-4);
+}
+
+
+strong {
+    color: var(--color-heading);
+}
+
+
+/* =========================================
+   Layout
+   ========================================= */
+
+.container {
+    width: min(100% - 2rem, var(--container-width));
+    margin-inline: auto;
+}
+
+
+.content-container {
+    width: min(100% - 2rem, var(--content-width));
+    margin-inline: auto;
+}
+
+
+.section {
+    padding-block: var(--space-20);
+}
+
+
+/* =========================================
+   Buttons
+   ========================================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+
+    padding: 0.75rem 1.25rem;
+
+    border-radius: var(--radius-sm);
+
+    font-size: var(--text-sm);
+    font-weight: 600;
+
+    transition:
+        background-color var(--transition-normal),
+        color var(--transition-normal),
+        transform var(--transition-fast),
+        box-shadow var(--transition-normal);
+}
+
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+
+.btn-primary:hover {
+    background: var(--color-primary-dark);
+    box-shadow: var(--shadow-sm);
+}
+
+
+.btn-secondary {
+    background: var(--color-primary-light);
+    color: var(--color-primary-dark);
+}
+
+
+.btn-secondary:hover {
+    background: #dcece6;
+}
+
+
+/* =========================================
+   Cards
+   ========================================= */
+
+.card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+
+    transition:
+        transform var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+
+/* =========================================
+   Utility Classes
+   ========================================= */
+
+.text-center {
+    text-align: center;
+}
+
+
+.text-muted {
+    color: var(--color-muted);
+}
+
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+
+.bg-white {
+    background: var(--color-white);
+}
+
+
+.hidden {
+    display: none;
+}

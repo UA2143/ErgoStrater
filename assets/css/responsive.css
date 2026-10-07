@@ -1,51 +1,422 @@
-/* =========================================
+
+/* =========================================================
    ErgoStarter — Responsive Styles
-   ========================================= */
+   Mobile / Tablet / Desktop
+   ========================================================= */
 
-@media (max-width: 900px) {
 
-    h1 {
-        font-size: 3rem;
+/* =========================================================
+   LARGE TABLETS / SMALL DESKTOPS
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .hero .container {
+        gap: var(--space-10);
     }
 
-    h2 {
-        font-size: 2.25rem;
+    .hero h1 {
+        font-size: 3.4rem;
     }
 
-    .section {
-        padding-block: var(--space-16);
+    .value-grid,
+    .guide-grid,
+    .gear-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr;
     }
 }
 
 
-@media (max-width: 600px) {
+/* =========================================================
+   TABLETS
+   ========================================================= */
 
-    html {
-        font-size: 15px;
+@media (max-width: 900px) {
+
+    /* -------------------------
+       Header
+       ------------------------- */
+
+    .site-header .container {
+        min-height: 68px;
     }
 
+    .main-navigation {
+        gap: var(--space-5);
+    }
+
+
+    /* -------------------------
+       Hero
+       ------------------------- */
+
+    .hero {
+        min-height: auto;
+
+        padding-block: var(--space-16);
+    }
+
+    .hero .container {
+        grid-template-columns: 1fr;
+
+        gap: var(--space-10);
+    }
+
+    .hero-content {
+        max-width: 720px;
+
+        margin-inline: auto;
+
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-inline: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        min-height: 340px;
+    }
+
+    .hero-placeholder {
+        width: min(100%, 400px);
+    }
+
+
+    /* -------------------------
+       Sections
+       ------------------------- */
+
+    .section-header-row {
+        align-items: flex-start;
+    }
+
+
+    /* -------------------------
+       Newsletter
+       ------------------------- */
+
+    .newsletter {
+        grid-template-columns: 1fr;
+
+        gap: var(--space-6);
+    }
+
+    .form-message {
+        grid-column: 1;
+    }
+
+    .newsletter-form {
+        width: 100%;
+    }
+
+    .newsletter-form input {
+        flex: 1;
+
+        width: auto;
+    }
+
+
+    /* -------------------------
+       Footer
+       ------------------------- */
+
+    .footer-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .footer-column:last-child {
+        grid-column: 2;
+    }
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .site-header .container {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-navigation {
+        position: absolute;
+
+        top: calc(100% + 1px);
+        left: 0;
+        right: 0;
+
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        padding: var(--space-3);
+
+        background: var(--color-white);
+
+        border-bottom: 1px solid var(--color-border);
+
+        box-shadow: var(--shadow-md);
+    }
+
+    .main-navigation.is-open {
+        display: flex;
+    }
+
+    .main-navigation a {
+        padding: 0.85rem 1rem;
+
+        border-radius: var(--radius-sm);
+    }
+
+    .main-navigation a:hover {
+        background: var(--color-primary-light);
+    }
+
+    .main-navigation a::after {
+        display: none;
+    }
+
+
+    /* -------------------------
+       Typography
+       ------------------------- */
+
     h1 {
-        font-size: 2.4rem;
+        font-size: 2.65rem;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 2.1rem;
     }
 
-    h3 {
-        font-size: 1.35rem;
+
+    /* -------------------------
+       Grids
+       ------------------------- */
+
+    .value-grid,
+    .guide-grid,
+    .gear-grid {
+        grid-template-columns: 1fr;
     }
+
+
+    /* -------------------------
+       Section heading
+       ------------------------- */
+
+    .section-header-row {
+        flex-direction: column;
+
+        gap: var(--space-4);
+    }
+
+    .section-link {
+        align-self: flex-start;
+    }
+
+
+    /* -------------------------
+       CTA
+       ------------------------- */
+
+    .cta-content {
+        padding: var(--space-10) var(--space-5);
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
 
     .container,
     .content-container {
-        width: min(100% - 1.5rem, var(--container-width));
+        width: min(
+            100% - 1.5rem,
+            var(--container-width)
+        );
     }
 
-    .section {
+
+    /* -------------------------
+       Header
+       ------------------------- */
+
+    .site-header .container {
+        min-height: 64px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+
+    /* -------------------------
+       Hero
+       ------------------------- */
+
+    .hero {
         padding-block: var(--space-12);
     }
 
-    .btn {
+    .hero h1 {
+        font-size: 2.35rem;
+
+        letter-spacing: -0.035em;
+    }
+
+    .hero-description {
+        font-size: var(--text-base);
+
+        line-height: 1.65;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+
         width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero-visual {
+        min-height: 260px;
+    }
+
+    .hero-placeholder {
+        width: min(100%, 320px);
+
+        min-height: 260px;
+    }
+
+
+    /* -------------------------
+       Value cards
+       ------------------------- */
+
+    .value-card {
+        padding: var(--space-6);
+    }
+
+
+    /* -------------------------
+       Newsletter
+       ------------------------- */
+
+    .newsletter {
+        padding: var(--space-6);
+
+        border-radius: var(--radius-lg);
+    }
+
+    .newsletter h2 {
+        font-size: var(--text-2xl);
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+
+        min-height: 48px;
+    }
+
+    .newsletter-form .btn {
+        width: 100%;
+    }
+
+
+    /* -------------------------
+       Footer
+       ------------------------- */
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: var(--space-8);
+    }
+
+    .footer-column:last-child {
+        grid-column: auto;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: var(--space-2);
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-placeholder {
+        min-height: 220px;
+    }
+
+    .value-card,
+    .guide-card-content,
+    .gear-card-content {
+        padding: var(--space-5);
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   Accessibility
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
     }
 }
