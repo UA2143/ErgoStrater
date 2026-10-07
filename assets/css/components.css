@@ -1049,3 +1049,218 @@
     border: 1px dashed var(--color-border);
     border-radius: var(--radius-md);
 }
+
+/* =========================
+   Article / SEO Pages
+   ========================= */
+
+.article-page {
+    background: var(--color-background);
+}
+
+.article-header {
+    padding: var(--space-4xl) 0 var(--space-3xl);
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.article-header .content-container {
+    max-width: 850px;
+}
+
+.article-header h1 {
+    max-width: 850px;
+    margin-bottom: var(--space-lg);
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+}
+
+.article-intro {
+    max-width: 760px;
+    margin-bottom: var(--space-lg);
+    color: var(--color-text-muted);
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+/* Article sections */
+
+.article-section {
+    padding: var(--space-4xl) 0;
+}
+
+.article-section-alt {
+    background: var(--color-surface);
+}
+
+.article-section .content-container {
+    max-width: 780px;
+}
+
+.article-section h2 {
+    margin-bottom: var(--space-lg);
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+}
+
+.article-section p {
+    margin-bottom: var(--space-lg);
+    font-size: 1.05rem;
+    line-height: 1.85;
+}
+
+.article-section p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Highlight box */
+
+.article-highlight {
+    padding: var(--space-xl);
+    background: var(--color-light-green);
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--radius-md);
+}
+
+.article-highlight h2 {
+    margin-bottom: var(--space-sm);
+    font-size: 1.4rem;
+}
+
+.article-highlight p {
+    margin-bottom: 0;
+}
+
+
+/* Table of contents */
+
+.article-toc {
+    display: grid;
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+}
+
+.article-toc a {
+    display: block;
+    padding: var(--space-md) var(--space-lg);
+    color: var(--color-text);
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    transition:
+        color var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.article-toc a:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateX(4px);
+}
+
+
+/* Tips */
+
+.article-tip {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: var(--space-xl);
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.article-tip strong {
+    color: var(--color-primary);
+    white-space: nowrap;
+}
+
+
+/* Lists */
+
+.article-list {
+    margin: var(--space-lg) 0;
+    padding-left: 1.5rem;
+}
+
+.article-list li {
+    margin-bottom: var(--space-md);
+    padding-left: var(--space-xs);
+    line-height: 1.7;
+}
+
+.article-list li:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Internal links */
+
+.article-inline-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: var(--space-sm);
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.article-inline-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Article CTA */
+
+.article-cta {
+    padding: var(--space-4xl) 0;
+    background: var(--color-dark-green);
+    color: #ffffff;
+}
+
+.article-cta .content-container {
+    max-width: 850px;
+    text-align: center;
+}
+
+.article-cta h2 {
+    margin-bottom: var(--space-md);
+    color: #ffffff;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.article-cta p {
+    max-width: 680px;
+    margin: 0 auto var(--space-xl);
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.8;
+}
+
+.article-cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.article-cta .btn-secondary {
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.article-cta .btn-secondary:hover {
+    border-color: #ffffff;
+}

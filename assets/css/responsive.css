@@ -434,3 +434,38 @@
         width: 100%;
     }
 }
+
+@media (max-width: 600px) {
+
+    .article-header {
+        padding: var(--space-3xl) 0 var(--space-2xl);
+    }
+
+    .article-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .article-intro {
+        font-size: 1rem;
+    }
+
+    .article-section {
+        padding: var(--space-3xl) 0;
+    }
+
+    .article-section p {
+        font-size: 1rem;
+    }
+
+    .article-tip {
+        flex-direction: column;
+    }
+
+    .article-cta-actions {
+        flex-direction: column;
+    }
+
+    .article-cta-actions .btn {
+        width: 100%;
+    }
+}
