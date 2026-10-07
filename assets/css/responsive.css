@@ -420,3 +420,17 @@
         animation-iteration-count: 1 !important;
     }
 }
+
+@media (max-width: 600px) {
+    .search-box {
+        padding: var(--space-xl);
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-form .btn {
+        width: 100%;
+    }
+}
