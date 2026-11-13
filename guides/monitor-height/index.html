@@ -50,12 +50,26 @@
     <link rel="stylesheet" href="../../assets/css/components.css">
     <link rel="stylesheet" href="../../assets/css/responsive.css">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KK4GDS9F"></script>
+<!-- Google tag (gtag.js) - Deferred for Core Web Vitals -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+  (function() {
+    var loaded = false;
+    function loadGTM() {
+      if (loaded) return;
+      loaded = true;
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KK4GDS9F';
+      document.head.appendChild(s);
+    }
+    window.addEventListener('load', function() { setTimeout(loadGTM, 2500); });
+    ['scroll', 'mousemove', 'touchstart', 'keydown'].forEach(function(evt) {
+      window.addEventListener(evt, loadGTM, { once: true, passive: true });
+    });
+  })();
 </script>
 
 <!-- OpenGraph Metadata -->
